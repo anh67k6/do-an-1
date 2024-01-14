@@ -1,0 +1,26 @@
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="internship" resource="default" engine="innodb" comment="custom data table">
+        <column xsi:type="int" name="entity_id" padding="10" unsigned="true" nullable="false" comment="Entity ID" identity="true"/>
+        <column xsi:type="varchar" name="full_name" nullable="false" length="255" comment="Full Name"/>
+        <column xsi:type="varchar" name="gender" nullable="false" length="10" comment="Gender"/>
+        <column xsi:type="text" name="address" nullable="false" comment="Address"/>
+        <column xsi:type="date" name="date_of_birth" nullable="false" comment="Date of Birth"/>
+        <column xsi:type="varchar" name="email" nullable="false" length="255" comment="Email"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id"/>
+        </constraint>
+    </table>
+
+    <table name="quote">
+        <column xsi:type="text" name="custom_vat" nullable="false" comment="Custom VAT"/>
+    </table>
+
+    <table name="sales_order_grid">
+        <column xsi:type="text" name="custom_vat" nullable="false" comment="Custom VAT"/>
+    </table>
+
+    <table name="sales_order">
+        <column xsi:type="text" name="custom_vat" nullable="false" comment="Custom VAT"/>
+    </table>
+</schema>

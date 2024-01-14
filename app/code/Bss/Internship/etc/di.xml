@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <virtualType name="Bss_Internship_Collection" type="Bss\Internship\Ui\DataProvider\Listing\Collection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">internship</argument>
+            <argument name="resourceModel" xsi:type="string">Bss\Internship\Model\ResourceModel\Internship</argument>
+        </arguments>
+    </virtualType>
+
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="internship_listing_data_source" xsi:type="string">Bss_Internship_Collection</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <type name="Magento\Checkout\Block\Cart">
+        <plugin name="Bss_Internship_discount_message" type="Bss\Internship\Plugin\Checkout\Block\DiscountMessagePlugin"/>
+    </type>
+
+    <type name="Magento\Checkout\Block\Checkout\LayoutProcessor">
+        <plugin name="add_delivery_date_field"
+                type="Bss\Internship\Plugin\Checkout\LayoutProcessor"/>
+    </type>
+</config>

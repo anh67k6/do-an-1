@@ -1,0 +1,6 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Bss_Internship::internship" title="Internship" module="Bss_Internship" sortOrder="100" resource="Bss_Internship::internship" parent="Magento_Customer::customer"/>
+        <add id="Bss_Internship::internship_grid" title="Internship" module="Bss_Internship" sortOrder="10" resource="Bss_Internship::internship_grid" parent="Bss_Internship::internship" action="cgrid/internshipgrid/index"/>
+    </menu>
+</config>

@@ -1,0 +1,31 @@
+<div>
+    <form id="internship-form" action="<?= $escaper->escapeHtml($block->getUrl('internship/index/save')) ?>" method="post">
+        <div>
+            <label for="full_name"><?= $escaper->escapeHtml(__('Họ và tên:* ')) ?></label>
+            <input type="text" id="full_name" name="full_name" required>
+        </div>
+        <div>
+            <label for="date_of_birth"><?= $escaper->escapeHtml(__('Ngày sinh:* ')) ?></label>
+            <input type="date" id="date_of_birth" name="date_of_birth" required>
+        </div>
+        <div>
+            <label for="gender"><?= $escaper->escapeHtml(__('Giới tính:* ')) ?></label>
+            <select id="gender" name="gender" required>
+                <option value="Nam"><?= $escaper->escapeHtml(__('Nam')) ?></option>
+                <option value="Nữ"><?= $escaper->escapeHtml(__('Nữ')) ?></option>
+            </select>
+        </div>
+        <div>
+            <label for="address"><?= $escaper->escapeHtml(__('Địa chỉ:* ')) ?></label>
+            <input type="text" id="address" name="address" required>
+        </div>
+        <div>
+            <label for="email"><?= $escaper->escapeHtml(__('Email:* ')) ?></label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <button type="submit"><?= $escaper->escapeHtml(__('Submit')) ?></button>
+        </div>
+    </form>
+</div>
+
